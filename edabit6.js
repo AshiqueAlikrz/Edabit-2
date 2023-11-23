@@ -1,19 +1,21 @@
-function decimalToBinary(decimalStr) {
-  const decimalNum = parseInt(decimalStr, 10);
+import React, { useRef, useEffect } from "react";
 
-  if (decimalNum === 0) {
-    return "0";
-  }
+function ExampleComponent() {
+  const myInputRef = useRef(null);
 
-  let binaryResult = "";
-  let currentNum = decimalNum;
+  useEffect(() => {
+    myInputRef.current.focus();
+  }, []);
 
-  while (currentNum > 0) {
-    binaryResult = (currentNum % 2) + binaryResult;
-    currentNum = Math.floor(currentNum / 2);
-  }
-
-  return binaryResult;
+  return (
+    <div>
+      <label>
+        Enter your name:
+        <input type="text" ref={myInputRef} />
+      </label>
+      <p>You entered: {myInputRef.current.value}</p>
+    </div>
+  );
 }
 
-console.log(decimalToBinary(5));
+export default ExampleComponent;
