@@ -6,7 +6,7 @@ function reverseOdd(str) {
     } else {
       return word;
     }
-  });
+  }); 
 
   return reversedWords.join(" ");
 }
