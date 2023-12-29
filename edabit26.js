@@ -11,4 +11,4 @@ function countBoomerangs(arr) {
 }
 
 const array1 = [3, 7, 3];
-console.log(countBoomerangs(array1)); // Output: 
+console.log(countBoomerangs(array1));  
